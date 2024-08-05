@@ -15,4 +15,10 @@ li {
   color: white;
 }
 
- 
+ body {
+   background-color: #ffff6b;
+ }
+
+h1 {
+  color: hotpink;
+}
