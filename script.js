@@ -76,7 +76,7 @@ var selectedFile = photoInput.files[0];
     var details = 'common_names,url,description,taxonomy,rank,gbif_id,inaturalist_id,image,synonyms,edible_parts,watering,propagation_methods,treatment,cause';
     var language = 'en';
     var apiPLANTIDurl = `https://plant.id/api/v3/identification?details=${details}&language=${language}`;
-  }
+  
 // Make our first api call to the plant id data base
 axios.post(
   apiPLANTIDurl,
@@ -92,6 +92,16 @@ axios.post(
        'Api-key': apikey, 
         'Content-Type' : 'application/json'
       }
-    }  
-  )
+    })
+  .then(function (response.data, base64image) {
+  console.log(Response)
+    Uploadandidentifyplantid()
+  })
+    .catch(function (error) {
+      alert(`Error: ${error.response.data} ❌❌❌`)
+      console.error('Error:', error);
+    });
+  }; 
+  
+Reader.readAsDataURL(selectedFile);
  } 
